@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" href="img/logo.svg">
+</head>
+
+<body>
+    <header>
+            <img src="img/logo.svg" alt="Alura" class="logo">
+    </header>
+    <main>
+        <section class="form-section">
+                <textarea  id="message-area" cols="30" rows="10"
+                    placeholder="Ingrese el texto aquí."></textarea>
+                <p id="aviso"><img src="img/alert.svg" alt="Aviso"> Solo letras minúsculas y sin acentos.</p>
+                <div class="container-buttons">
+                    <input type="button" value="Encriptar" id="encrypt-button">
+                    <input type="button" value="Desencriptar" id="decrypt-button">
+                </div>
+        </section>
+        <section class="info-section">
+            <div class="info-container">
+                <div class="img-container">
+                    <img src="img/looking.svg" alt="buscando" id="looking">
+                </div>
+                <div class="notfound-container">
+                    <p>Ningún mensaje fue encontrado.</p>
+                </div>
+                <div class="hint-container">
+                    <p id="hint-text"> Ingresa el mensaje que desees encriptar o desencriptar.</p>
+                </div>
+                <div>
+                    <textarea  id="text-done" cols="30" rows="10" readonly placeholder="Hola"></textarea>
+                    <input type="button" value="Copiar" id="copy-button">
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Samuel David Castro Escobar</p>
+    </footer>
+    <script src="scripts/script.js"></script>
+</body>
+
+</html>

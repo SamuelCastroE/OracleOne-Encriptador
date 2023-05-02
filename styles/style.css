@@ -1,0 +1,648 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root{
+    --backgournd-color: #F3F5FC;
+    --primary-color: #0A3871;
+    --highlight-color: #D8DFE8;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+body{
+    background-color: var(--backgournd-color);
+    font-family: 'Roboto', sans-serif;
+}
+
+/*Responsive -- Mobile*/
+@media  screen and (max-width: 480px) {
+
+    header{
+        width: 100%;
+        height: 4.5rem;
+    }
+
+    main{
+        display: block;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    section{
+        width: 100%;
+    }
+
+    .logo{
+        height: 2.5rem;
+        padding: 1rem;
+    }
+
+    .form-section{
+        width: 100%;
+    }
+
+    .info-section{
+        display: flex;
+        text-align: center;
+    }
+
+    #message-area{
+        width: 90%;
+        height: 28.12rem;
+        margin: 0.6rem 0.6rem 0 1.25rem;
+        font-size: 1.5rem;
+        color: var(--primary-color);
+        background-color: transparent;
+        resize: none;
+        border: none;
+        outline: none;
+    }
+
+    #message-area::placeholder{
+        font-size: 1.25rem;
+        color: var(--primary-color);
+    }
+
+    .form-section  p{
+        margin: 0.6rem 0 0.6rem 1.25rem;
+    }
+
+    .container-buttons{
+        display: block;
+        margin: 0.3rem 0.6rem 0.3rem 0.6rem;
+    }
+
+    #encrypt-button, #decrypt-button {
+        width: 95%;
+        height: 3.1rem;
+        margin: 0.6rem 0.6rem;
+        border-radius: 0.9rem;
+        font-size: 1.25rem;
+    }
+
+    #encrypt-button{
+        color: #FFFFFF;
+        background-color: #0A3871;
+        border: none;
+    }
+
+    #decrypt-button{
+        color: #0A3871;
+        background-color: #D8DFE8;
+        border: 1px solid var(--primary-color);
+    }
+
+    #encrypt-button:hover, #decrypt-button:hover, #copy-button:hover {
+        transition: 0.3s;
+        box-shadow: 1px 5px 12px 0px rgba(0,0,0,0.37);
+    }
+
+    #aviso{
+        margin: 0.6rem 0.6rem 0 1.25rem;
+    }
+
+    .info-container{
+        width: 90%;
+        margin: 0.6rem 0 0.6rem 1.25rem;
+        background-color: #FFFFFF;
+        border-radius: 15px;
+        box-shadow: 0px 2px 10px 0px rgba(168,168,168,1);
+    }
+
+    .info-container > * {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .notfound-container{
+        width: 70%;
+        height: 3.1rem;
+        margin: 1.25rem;
+        font-weight: bold;
+        text-align: center;
+        color: #0A3871;
+
+    }
+
+    .notfound-container p{
+        font-size: 1.25rem;
+    }
+
+    .hint-container{
+        width: 80%;
+        height: 40px;
+        font-size: 1rem;
+        text-align: center;
+        margin: 1.25rem;
+
+    }
+
+    #text-done{
+        width: 80%;
+        margin: 1.25rem;
+        font-size: 1.5rem;
+        background-color: transparent;
+        color: var(--primary-color);
+        resize: none;
+        border: none;
+        outline: none;
+        display: none;
+    }
+
+    #copy-button{
+        width: 80%;
+        height: 3.1rem;
+        margin: 0 0 1.25rem 0;
+        border-radius: 0.9rem;
+        color: #0A3871;
+        background-color: #D8DFE8;
+        border: 1px solid var(--primary-color);
+        display: none;
+    }
+
+    footer{
+        text-align: center;
+    }
+
+    #looking {
+      display: none;
+    }
+}
+/*Responsive -- Tablet*/
+@media screen and (min-width: 481px) and (max-width: 960px) {
+
+    header{
+        width: 100%;
+        height: 4.5rem;
+    }
+
+    main{
+        display: block;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    section{
+        width: 100%;
+    }
+
+    .logo{
+        height: 2.5rem;
+        padding: 1rem;
+    }
+
+    .form-section{
+        width: 100%;
+    }
+
+    .info-section{
+        display: flex;
+        text-align: center;
+    }
+
+    #message-area{
+        width: 95%;
+        height: 50rem;
+        margin: 0.6rem 1.25rem  0 1.25rem;
+        font-size: 1.5rem;
+        color: var(--primary-color);
+        background-color: transparent;
+        resize: none;
+        border: none;
+        outline: none;
+    }
+
+    #message-area::placeholder{
+        font-size: 1.25rem;
+        color: var(--primary-color);
+    }
+
+    .form-section  p{
+        margin: 0.6rem 0 0.6rem 1.25rem;
+    }
+
+    .container-buttons{
+        display: flex;
+        width: 95%;
+        margin: 0.6rem 1.25rem  0 1.25rem;
+
+    }
+
+    #encrypt-button, #decrypt-button {
+        width: 100%;
+        height: 3.1rem;
+        margin: 0 0.6rem;
+        border-radius: 0.9rem;
+        font-size: 1.25rem;
+    }
+
+    #encrypt-button{
+        color: #FFFFFF;
+        background-color: #0A3871;
+        border: none;
+    }
+
+    #decrypt-button{
+        color: #0A3871;
+        background-color: #D8DFE8;
+        border: 1px solid var(--primary-color);
+    }
+
+    #encrypt-button:hover, #decrypt-button:hover, #copy-button:hover {
+        transition: 0.3s;
+        box-shadow: 1px 5px 12px 0px rgba(0,0,0,0.37);
+    }
+
+    #aviso{
+        margin: 0.6rem 0.6rem 0 1.25rem;
+    }
+
+    .info-container{
+        width: 95%;
+        margin: 0.6rem 1.25rem  0 1.25rem;
+        background-color: #FFFFFF;
+        border-radius: 15px;
+        box-shadow: 0px 2px 10px 0px rgba(168,168,168,1);
+    }
+
+    .notfound-container{
+        display: inline-block;
+        align-items: top;
+        width: 70%;
+        height: 3.1rem;
+        margin: 1.25rem;
+        font-weight: bold;
+        text-align: center;
+        color: #0A3871;
+    }
+
+    .notfound-container p{
+        font-size: 1.25rem;
+    }
+
+    .hint-container{
+        display: inline-block;
+        align-items: top;
+        width: 80%;
+        height: 40px;
+        font-size: 1rem;
+        text-align: center;
+        margin: 1.25rem;
+    }
+
+    #text-done{
+        width: 90%;
+        margin: 1.25rem 1rem;
+        font-size: 1.5rem;
+        color: var(--primary-color);
+        background-color: transparent;
+        resize: none;
+        border: none;
+        outline: none;
+        display: none;
+    }
+
+    #copy-button{
+        width: 90%;
+        height: 3.1rem;
+        margin: 0 0 1.25rem 0;
+        border-radius: 0.9rem;
+        color: #0A3871;
+        background-color: #D8DFE8;
+        border: 1px solid var(--primary-color);
+        display: none;
+    }
+
+    footer{
+        margin: 0.6rem;
+        text-align: center;
+    }
+
+    #looking {
+      display: none;
+    }
+}
+
+/*Responsive -- Laptop */
+@media screen and (min-width: 961px) and (max-width: 1024px){
+
+    header{
+        width: 100%;
+        height: 4.5rem;
+    }
+
+    .logo{
+        height: 2.5rem;
+        padding: 1rem;
+    }
+
+    main{
+        display: flex;
+        width: 100%;
+        height: 50rem;
+        justify-content: space-between;
+    }
+
+    footer{
+        text-align: center;
+        width: 100%;
+        height: 3rem;
+    }
+
+    section{
+        height: 100%
+    }
+
+    .form-section{
+        width: 70%;
+    }
+
+    .info-section{
+        width: 30%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    #message-area{
+        display: flex;
+        justify-content: center;
+        width: 80%;
+        height: 36rem;
+        margin: 1.8rem 50px 1rem 16%;
+        padding: 0.6rem;
+        font-size: 1.5rem;
+        color: var(--primary-color);
+        background-color: transparent;
+        resize: none;
+        border: none;
+        outline: none;
+    }
+
+    #message-area::placeholder{
+        color: var(--primary-color);
+    }
+
+    #aviso{
+        margin: 0 0 0.3rem 16%;
+    }
+
+    .container-buttons {
+        display: flex;
+        margin: 1.5rem 0 0.6rem 14.3%;
+    }
+
+    #encrypt-button, #decrypt-button {
+        width: 100%;
+        height: 50px;
+        margin: 0 10px;
+        text-align: center;
+        border-radius: 15px;
+        font-size: 20px;
+        cursor: pointer;
+        border: none;
+    }
+
+    #encrypt-button{
+        color: #FFFFFF;
+        background-color: #0A3871;
+    }
+
+    #decrypt-button{
+        color: #0A3871;
+        background-color: #D8DFE8;
+        border: 1px solid var(--primary-color);
+    }
+
+    #encrypt-button:hover, #decrypt-button:hover, #copy-button:hover {
+        transition: 0.3s;
+        box-shadow: 1px 5px 12px 0px rgba(0,0,0,0.37);
+    }
+
+    .info-container{
+        text-align: center;
+        width: 95%;
+        height: 90%;
+        margin: 1.5rem 0.3rem 0 0.6rem;
+        background-color: #FFFFFF;
+        border-radius: 15px;
+        box-shadow: 0px 2px 10px 0px rgba(168,168,168,1);
+    }
+
+    .info-container > .notfound-container, .hint-container {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .img-container img{
+        width: 100%;
+        height: auto;
+        margin-top: 40%;
+    }
+
+    .notfound-container{
+        width: 70%;
+        height: 50px;
+        margin: 1.25rem;
+        font-weight: bold;
+        color: #0A3871;
+    }
+
+    .notfound-container p{
+        font-size: 1.25rem;
+    }
+
+    .hint-container{
+        width: 80%;
+        height: 40px;
+        font-size: 15px;
+    }
+
+    #text-done{
+        height: 36rem;
+        width: 90%;
+        margin: 1rem;
+        background: transparent;
+        color: var(--primary-color);
+        font-size: 1.5rem;
+        border: none;
+        outline: none;
+        display: none;
+    }
+
+    #copy-button{
+        width: 90%;
+        height: 50px;
+        margin: 45px 10px;
+        border-radius: 15px;
+        font-size: 20px;
+        cursor: pointer;
+        background-color: transparent;
+        color: var(--primary-color);
+        border: 1px solid var(--primary-color);
+        display: none;
+    }
+}
+
+/*Responsive -- Laptop/Desktop Large */
+@media screen and (min-width: 1024px){
+
+    header{
+        width: 100%;
+        height: 4.5rem;
+    }
+
+    .logo{
+        height: 2.5rem;
+        padding: 1rem;
+    }
+
+    main{
+        display: flex;
+        width: 100%;
+        height: 50rem;
+        justify-content: space-between;
+    }
+
+    footer{
+        text-align: center;
+        width: 100%;
+    }
+
+    section{
+        height: 100%
+    }
+
+    .form-section{
+        width: 70%;
+    }
+
+    .info-section{
+        width: 30%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    #message-area{
+        display: flex;
+        justify-content: center;
+        width: 80%;
+        height: 36.5rem;
+        margin: 1.8rem 3.1rem 1rem 16%;
+        padding: 0.6rem;
+        font-size: 1.5rem;
+        color: var(--primary-color);
+        background-color: transparent;
+        resize: none;
+        border: none;
+        outline: none;
+    }
+
+    #message-area::placeholder{
+        color: var(--primary-color);
+    }
+
+    #aviso{
+        margin: 0 0 0.3rem 16%;
+    }
+
+    .container-buttons {
+        display: flex;
+        margin: 1.5rem 0 0.6rem 14.3%;
+    }
+
+    #encrypt-button, #decrypt-button {
+        width: 100%;
+        height: 50px;
+        margin: 0 10px;
+        text-align: center;
+        border-radius: 15px;
+        font-size: 20px;
+        cursor: pointer;
+        border: none;
+    }
+
+    #encrypt-button{
+        color: #FFFFFF;
+        background-color: #0A3871;
+    }
+
+    #decrypt-button{
+        color: #0A3871;
+        background-color: #D8DFE8;
+        border: 1px solid var(--primary-color);
+    }
+
+    #encrypt-button:hover, #decrypt-button:hover, #copy-button:hover {
+        transition: 0.3s;
+        box-shadow: 1px 5px 12px 0px rgba(0,0,0,0.37);
+    }
+
+    .info-container{
+        text-align: center;
+        width: 95%;
+        height: 90%;
+        /*93%*/
+        margin: 1.5rem 0.3rem 0 0.6rem;
+        background-color: #FFFFFF;
+        border-radius: 15px;
+        box-shadow: 0px 2px 10px 0px rgba(168,168,168,1);
+    }
+
+    .info-container > .notfound-container, .hint-container, .img-container {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .img-container img{
+        width: 100%;
+        height: 50%;
+        margin-top: 40%;
+    }
+
+    .notfound-container{
+        width: 70%;
+        height: 3.1rem;
+        margin: 1.25rem;
+        font-weight: bold;
+        color: #0A3871;
+    }
+
+    .notfound-container p{
+        font-size: 1.25rem;
+    }
+
+    .hint-container{
+        width: 80%;
+        height: 2.5rem;
+        font-size: 15px;
+    }
+
+    #text-done{
+        height: 37.2rem;
+        width: 90%;
+        margin: 1rem;
+        color: var(--primary-color);
+        font-size: 1.5rem;
+        background: transparent;
+        resize: none;
+        border: none;
+        outline: none;
+        display: none;
+    }
+
+    #copy-button{
+        width: 90%;
+        height: 50px;
+        margin: 2.3rem 0.6rem;
+        border-radius: 0.9rem;
+        font-size: 1.25rem;
+        cursor: pointer;
+        background-color: transparent;
+        color: var(--primary-color);
+        border: 1px solid var(--primary-color);
+        display: none;
+    }
+}
